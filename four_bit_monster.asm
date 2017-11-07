@@ -128,30 +128,33 @@
 
 
 main:
+;; put the stack pointer into r23, clear working registers
     movia   r23,stack
     mov     r6,r0
     mov     r5,r0
     mov     r4,r0
     mov     r3,r0
     mov     r2,r0
+;; call this to write the data (zero) out to clear the LEDs
     call    write
 
 
 loop:
     call    read
-
+;; switch over r3 to read the current button press
+;; push the switches onto stack
     andi    r4,r3,CMD_DUP
     bne     r4,r0,calc_dup
-
+;; pop last value onto LEDs / switches
     andi    r4,r3,CMD_POP
     bne     r4,r0,calc_pop
-
+;; do an operation based on the switches
     andi    r4,r3,CMD_OPR
     bne     r4,r0,calc_opr
-
+;; the last is All Clear which resets everthing
     andi    r4,r3,CMD_CLR
     bne     r4,r0,main
-
+;; do it over again
     br      loop
 
 
