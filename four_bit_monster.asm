@@ -7,7 +7,7 @@
 ;;                                    //
 ;;___________________________________/
 ;;
-;;   Author: Justin Lee  <kool dot name at gmail dot com>
+;;   Author: Justin Lee  <justin at taiz dot me>
 ;;
 ;;   Compiler & Emulator: http://jniosemu.codetouch.com/
 ;;
