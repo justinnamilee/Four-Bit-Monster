@@ -8,6 +8,8 @@
 ;;___________________________________/
 ;;
 ;;   Author: Justin Lee  <justin at taiz dot me>
+;;   License: GNU GPLv3 or above
+;;   Copyright: Justin Lee 2011 - 2018
 ;;
 ;;   Compiler & Emulator: http://jniosemu.codetouch.com/
 ;;
